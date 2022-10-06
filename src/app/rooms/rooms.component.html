@@ -1,0 +1,26 @@
+<!-- <h1 style="text-align: center">Hotel rooms List</h1>
+<htl-header></htl-header> -->
+
+
+<router-outlet></router-outlet>
+<!-- {{rooms$ | async | json}} -->
+<!-- <div *ngIf="selectedRoom">
+    {{selectedRoom | json}}
+</div> -->
+<button class="btn btn-primary" routerLink="add" routerLinkActive="router-link-active">addroom</button>
+
+{{priceFilter | json}}
+
+<div>
+    <input type="number" class="form-control" placeholder="Price" />
+</div>
+
+<div *ngIf="hideRooms">
+    <htl-rooms-list [rooms]="rooms$ | async" (selectedRoom)="selectRoom($event)"></htl-rooms-list>
+</div>
+
+
+<!-- <button (click)="toggle()">{{btn}} Rooms</button>
+<button (click)="editRoom()">EditRooms</button>
+<button (click)="deleteRoom()">DeleteRooms</button>
+<h1>{{totalbytes}} loaded</h1>  -->

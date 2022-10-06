@@ -1,0 +1,19 @@
+<form>
+    <div class=" form-group">
+
+        <!-- #emailControl="ngModel" htlEmailvalidator-->
+        <!-- put above this into the input tag for validation -->
+        <input required type="text" class="form-control" name="roomType" placeholder="Provide your user name "
+            [(ngModel)]="email">
+        <!-- <div>{{emailControl.errors | json}}</div> -->
+        <!-- uncomment above for validation dynamic -->
+    </div>
+    <div class="form-group">
+        <input required type="password" class="form-control" name="password" placeholder="Provide your password"
+            [(ngModel)]="password">
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary" (click)="login()">Login</button>
+    </div>
+
+</form>
